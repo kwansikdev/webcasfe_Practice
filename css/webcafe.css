@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('./fontello.css');
+
+/* 초기화 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: red;
+}
+
+html {
+  font-size: 10px;
+
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-weight: 400;
+}
+
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer {
+  margin: 0 auto;
+  width: 940px;
+}
+
+.header {
+  box-sizing: border-box;
+  background-color: pink;
+  position: relative;
+  padding: 0 30px 50px 30px;
+}
+
+/* 로고 */
+.logo {
+  background-color: yellowgreen;
+  margin: 0;
+  position: absolute;
+  top: 45px;
+  left: 70px;
+}
+
+.member {
+  list-style: none;
+  margin: 0;
+  text-align: right;
+  padding: 2px 0;
+  font-size: 0;
+  right: -10px;
+  position: relative;
+}
+.member li{
+  /* background-color: white; */
+  display: inline-block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.member li:nth-child(n+2)::before{
+  font-family: "fontello";
+  content: '\f142';
+}
+.member a{
+  padding: 8px 10px;
+}
+
+.visual {
+  background-color: blue;
+  height: 120px;
+}
+
+.main-content {
+  background-color: orange;
+  min-height: 400px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.group {
+  background-color: yellow;
+
+}
+
+.group1 {
+  /* width: 250px; */
+  flex-basis: 250px;
+}
+
+.group2 {
+  flex-basis: 390px;
+}
+
+.group3 {
+  flex-basis: 190px;
+}
+
+.slogan {
+  background-color: aqua;
+}
+
+.footer {
+  background-color: red;
+}
