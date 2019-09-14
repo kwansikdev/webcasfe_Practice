@@ -1,8 +1,8 @@
-@charset "utf-8";
+@import "utf-8";
+@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
-@import url('./fontello.css');
+@import url("./fontello.css");
 
-/* 초기화 */
 *,
 *::before,
 *::after {
@@ -20,14 +20,22 @@ a:hover {
 
 html {
   font-size: 10px;
-
 }
 
 body {
-  margin: 0;
   font-size: 1.4rem;
+  margin: 0;
   font-family: 'Spoqa Han Sans', 'Sans-serif';
   font-weight: 400;
+  background-color: gray;
+}
+
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
 }
 
 .header,
@@ -35,12 +43,11 @@ body {
 .main-content,
 .slogan,
 .footer {
-  margin: 0 auto;
   width: 940px;
+  margin: 0 auto;
 }
 
 .header {
-  box-sizing: border-box;
   background-color: pink;
   position: relative;
   padding: 0 30px 50px 30px;
@@ -48,7 +55,6 @@ body {
 
 /* 로고 */
 .logo {
-  background-color: yellowgreen;
   margin: 0;
   position: absolute;
   top: 45px;
@@ -56,30 +62,37 @@ body {
 }
 
 .member {
-  list-style: none;
-  margin: 0;
-  text-align: right;
-  padding: 2px 0;
-  font-size: 0;
-  right: -10px;
+  list-style-type: none;
   position: relative;
-}
-.member li{
-  /* background-color: white; */
-  display: inline-block;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-}
-.member li:nth-child(n+2)::before{
-  font-family: "fontello";
-  content: '\f142';
-}
-.member a{
-  padding: 8px 10px;
+  padding: 2px 0;
+  text-align: right;
+  margin: 0;
+  right: -10px;
 }
 
+.member li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.member li:nth-child(n+2)::before {
+  font-family: "fontello";
+  content: "\f142";
+}
+
+.member a {
+  padding: 8px 5px;
+  display: inline-block;
+}
+
+/* 메인메뉴 */
+
+
+
+/* 비주얼 */
 .visual {
-  background-color: blue;
+  background-color: yellow;
   height: 120px;
 }
 
@@ -92,28 +105,31 @@ body {
   justify-content: space-between;
 }
 
-.group {
-  background-color: yellow;
-
-}
-
 .group1 {
-  /* width: 250px; */
+  background-color: gray;
   flex-basis: 250px;
 }
 
 .group2 {
+  background-color: gray;
   flex-basis: 390px;
 }
 
 .group3 {
-  flex-basis: 190px;
+  background-color: gray;
+  flex-basis: 180px;
 }
 
 .slogan {
   background-color: aqua;
+  padding: 15px 0;
+}
+
+.footer-bg {
+  background-color: yellowgreen;
+  padding: 15px 0;
 }
 
 .footer {
-  background-color: red;
+  background-color: green;
 }
