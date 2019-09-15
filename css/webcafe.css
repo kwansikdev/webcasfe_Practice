@@ -36,6 +36,8 @@ body {
   height: 1px;
   margin: -1px;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
 .header,
@@ -88,7 +90,86 @@ body {
 
 /* 메인메뉴 */
 
+.menu {
+  list-style-type: none;
+  background-color: #f2401d;
+  background-image: linear-gradient(to bottom, #f48870 0%, #f24421 35%, #f2401d 70%, #f48870 100%);
+  margin: 5px 0 0 0;
+  padding-left: 225px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 -2px 2px 0 #181818;
+}
 
+.menu::after {
+  display: block;
+  content: "";
+  clear: both;
+
+}
+
+.menu-item {
+  position: relative;
+  float: left;
+}
+
+.menu-act .btn-menu {
+  color: yellow;
+}
+
+.btn-menu {
+  display: block;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0 20px;
+  line-height: 45px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 0 0 #181818, -1px 0 0 #181818, 0 1px 0 #181818, 0 -1px 0 #181818;
+}
+
+.menu-act .btn-menu::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #181818;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  white-space: nowrap;
+  background-color: yellow;
+}
+
+
+.sub-menu li,
+.sub-menu1 a {
+  display: inline-block;
+}
+
+.sub-menu1 a {
+  padding: 8px 0 7px 0;
+  margin-right: 10px;
+}
+
+.menu-act .sub-menu {
+  display: block;
+  top: 47px;
+}
+
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+  left: 0;
+}
+
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
+  right: 0;
+}
 
 /* 비주얼 */
 .visual {
