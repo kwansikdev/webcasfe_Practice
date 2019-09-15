@@ -177,6 +177,7 @@ body {
   height: 120px;
 }
 
+/* 메인 콘텐츠 */
 .main-content {
   background-color: orange;
   min-height: 400px;
